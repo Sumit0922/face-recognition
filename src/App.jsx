@@ -13,7 +13,7 @@ function App() {
     loadModels();
   }, []);
 
-// this function for the start camera. 
+  // this function for the start camera.
   const startCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -24,8 +24,7 @@ function App() {
     }
   };
 
-
- // this function load all model which required to detect the face
+  // this function load all model which required to detect the face
   const loadModels = async () => {
     setIsLoading(true);
 
@@ -52,7 +51,8 @@ function App() {
 
   const loadLabeledImages = async () => {
     const labeledDescriptors = [];
-    const labels = ["Ashvin_Lad", "Sumit_Rahangdale","markZ" ];
+    const labels = ["ENTER YOUR NAME/ LABEL"]; //NOTE : ADD ONLY SIMILAR NAME WHICH IMAGE YOU ARE ADDED IN THE PUBLIC/LABEL FOLDER 
+       //IMG NAME AND LABEL NAME SHOULD BE SAME.
 
     for (const label of labels) {
       const descriptors = [];
@@ -93,8 +93,7 @@ function App() {
     return labeledDescriptors;
   };
 
-
-  // this face detection function use for the  detecting the face  which appear in front of the camera 
+  // this face detection function use for the  detecting the face  which appear in front of the camera
 
   const faceDetection = async (labeledFaceDescriptors) => {
     const detectedIds = [];
@@ -197,8 +196,7 @@ function App() {
     return dominantExpression;
   };
 
-
-  // this all part to 
+  // this all part to
   return (
     <div
       className="myapp"
