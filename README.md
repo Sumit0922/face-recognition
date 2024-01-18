@@ -3,5 +3,5 @@ This repository contains a face recognition project developed in javascript, usi
 
 
 # installatio Steps......clone Repository
-add images for match face in PUBLIC/LABEL folder
-in App.js file add Your Label to show id
+add images for match face in PUBLIC/LABEL folder.
+In App.js file add Your Label to show id
